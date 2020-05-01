@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Points</title>
+
+
+</head>
+<body>
+<h1>Points</h1>
+<table border="1" cellpadding="5px">
+    <tr style="background:blue; color: white;">
+        <td>ID</td>
+        <td>Time added</td>
+        <td>Latitude</td>
+        <td>Longitude</td>
+    </tr>
+    {%for point in points %}
+    <tr>
+        <td>{{point.pk}}</td>
+        <td>{{point.added_time}}</td>
+        <td>{{point.lat}}</td>
+        <td>{{point.lng}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
